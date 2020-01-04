@@ -17,6 +17,18 @@
     </script>
 </head>
 <body>
+   <script>
+       var d = new Date();
+       var n = d.getHours();
+                document.writeln("현재시각 : " +n+" 시");
+                if ( n >= 24){ //밤 10시 이후에 갈색 배경으로 변경
+                document.querySelector('body').style.backgroundColor = 'gray';
+                document.querySelector('body').style.color = 'white';
+                } else {
+                document.querySelector('body').style.backgroundColor = 'white';
+                document.querySelector('body').style.color = 'black'
+                }
+    </script>
     <div class="container">
         <header>
             <div>
