@@ -1,4 +1,4 @@
-<!doctype>
+<!DOCTYPE>
 <html>
 <head>
    <title>실습코딩 WEB1</title>
@@ -6,29 +6,16 @@
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/Style.css">
     <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="colors.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155254288-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-155254288-1');
+    <script type="text/javascript">
     </script>
+        <!--End of Tawk.to Script--><!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155254288-1"></script>
 </head>
 <body>
-   <script>
-       var d = new Date();
-       var n = d.getHours();
-                document.writeln("현재시각 : " +n+" 시");
-                if ( n >= 24){ //밤 10시 이후에 갈색 배경으로 변경
-                document.querySelector('body').style.backgroundColor = 'gray';
-                document.querySelector('body').style.color = 'white';
-                } else {
-                document.querySelector('body').style.backgroundColor = 'white';
-                document.querySelector('body').style.color = 'black'
-                }
-    </script>
     <div class="container">
         <header>
             <div>
@@ -47,9 +34,12 @@
                 <p class="list">개발도구</p><p>|</p>
                 <p class="list">프로젝트 관리</p><p>|</p>
                 <p class="list">기타</p></div>
-            <div style="color:darkgray;">
-                <span id="breadcrumb_line">
-						생활코딩 <span class="divider">&gt;</span> WEB <span class="divider">&gt;</span> WEB1 - HTML &amp; Internet					</span>
+            <div id="breadcrumb_line" style="color:darkgray;">
+                <span>
+                    <span class="timer" style="position:relative;right:270px;">
+                        <script>nightdayhandler(this);</script>
+                    </span>
+				생활코딩 <span class="divider">&gt;</span> WEB <span class="divider">&gt;</span> WEB1 - HTML &amp; Internet					</span>
             </div>
         </header>
         <section class="content">
@@ -138,42 +128,11 @@
               <!-- 라이브리 시티 설치 코드 -->
                 <div id="lv-container" data-id="city" data-uid="MTAyMC80ODEzOC8yNDYzNQ==">
                     <script type="text/javascript">
-                   (function(d, s) {
-                       var j, e = d.getElementsByTagName(s)[0];
-
-                       if (typeof LivereTower === 'function') { return; }
-
-                       j = d.createElement(s);
-                       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                       j.async = true;
-
-                       e.parentNode.insertBefore(j, e);
-                   })(document, 'script');
                     </script>
                 <noscript> 라이브리 댓글 작성을 위해 JavaScript를 활성화 해주세요</noscript>
                 </div>
                 <!-- 시티 설치 코드 끝 -->
                 </div><!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/5e0d65927e39ea1242a2a0e9/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script--><!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155254288-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-155254288-1');
-</script>
             </main>
             <aside>
             </aside>
