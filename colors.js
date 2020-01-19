@@ -146,7 +146,7 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 
 //밤낮 시스템
 var d = new Date();
-var h = d.getHours()-18;
+var h = d.getUTCHours()-18;
 var i = 15;
 if (h < 7){
     document.querySelector("#moon").style.top = 110-13*h;  //11시간 
