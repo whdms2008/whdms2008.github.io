@@ -16,6 +16,7 @@ function nightdayhandler(self) {
     var d = new Date();
     var h = d.getHours();
     var day;
+    //h >= 18 && h < 22
     if (h >= 18 && h < 22) { //밤 8시 이후에 회색 배경으로 변경
         day = '저녁';
         ColorControll.setColor("#breadcrumb_line", 'white');
@@ -24,7 +25,7 @@ function nightdayhandler(self) {
         ColorControll.setBackgroundColor('body', 'dimgray');
         ColorControll.setColor('body', 'white');
         ColorControll.setBackgroundColor('header', 'dimgray');
-    } else if(h >= 22 || h < 7) {
+    } else if(true) {
         day = '밤';
         ColorControll.setColor("#breadcrumb_line", 'white');
         ColorControll.setBackgroundColor("#breadcrumb_line", 'black');
