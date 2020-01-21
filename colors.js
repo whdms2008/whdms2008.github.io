@@ -25,7 +25,7 @@ function nightdayhandler(self) {
         ColorControll.setBackgroundColor('body', 'dimgray');
         ColorControll.setColor('body', 'white');
         ColorControll.setBackgroundColor('header', 'dimgray');
-    } else if(true) {
+    } else if(h >= 22 || h < 7) {
         day = '밤';
         ColorControll.setColor("#breadcrumb_line", 'white');
         ColorControll.setBackgroundColor("#breadcrumb_line", 'black');
@@ -77,19 +77,11 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 })();
 
 //밤낮 시스템
-// var d = new Date();
-// var h = d.getUTCHours()-9;
-// if (h < 7){
-//     document.querySelector("#moon").style.top = 110-13*h;  //11시간 
-// } else {
-//     document.querySelector("#moon").style.top = 110-13*7+13*(h-7);  //11시간 
-//     }
-// document.querySelector("#moon").style.right = 1585-130*h;var d = new Date();
+var d = new Date();
 var h = d.getUTCHours()-9;
-if (true){
-    document.querySelector("#moon").style.top = 110-13*5;  //11시간 
-} else {
-    document.querySelector("#moon").style.top = 110-13*7+13*(3-7);  //11시간 
+if (h < 7){
+    document.querySelector("#moon").style.top = 110-13*h;  //11시간 
+    } else {
+        document.querySelector("#moon").style.top = 110-13*7+13*(h-7);  //11시간 
     }
-document.querySelector("#moon").style.right = 1585-130*5;
-
+    document.querySelector("#moon").style.right = 1585-130*h;
