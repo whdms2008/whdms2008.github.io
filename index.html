@@ -40,7 +40,7 @@
             <div id="breadcrumb_line" style="color:darkgray;">
                 <span>
                     <span class="timer" style="position:relative;right:270px;">
-                        <script>nightdayhandler(this);init();</script>
+                        <script>nightdayhandler(this);</script>
                     </span>
 				근무 날짜 : 금,토 22:00시 ~ 09:00시</span>
             </div>
@@ -79,15 +79,15 @@
 			<style>.selected{text-decoration:line-through;font-weight:700;}</style>
 			<!-- 스타일은 CSS에 추가해주는 것을 권장합니다. --> 
 			<script> </script>
-                    <label for="deadline_1">- 식기 정리 <input type="checkbox" id="deadline_1"></label><br>
-                    <label for="deadline_2">- 자리 정리 <input type="checkbox" id="deadline_2"></label><br>
-                    <label for="deadline_3">- 일반 쓰레기 비우기 <input type="checkbox" id="deadline_3"> </label><br>
-                    <label for="deadline_4">- 음식물 쓰레기 비우기 <input type="checkbox" id="deadline_4"> </label><br>
-                    <label for="deadline_5">- 재고 채우기 <input type="checkbox" id="deadline_5"> </label><br>
-                    <label for="deadline_6">- 흡연실 청소 <input type="checkbox" id="deadline_6"> </label><br>
-                    <label for="deadline_7">- 바닥 청소 <input type="checkbox" id="deadline_7"> </label><br>
-                    <label for="deadline_8">- 화장실 청소 <input type="checkbox" id="deadline_8"> </label><br>
-                    <label for="deadline_9">- 근무일지 쓰기 <input type="checkbox" id="deadline_9"> </label><br>
+                    <label style="font-size:0.8rem;"for="deadline_1">- 식기 정리 <input type="checkbox" id="deadline_1"></label><br>
+                    <label style="font-size:0.8rem;" for="deadline_2">- 자리 정리 <input type="checkbox" id="deadline_2"></label><br>
+                    <label style="font-size:0.8rem;" for="deadline_3">- 일반 쓰레기 비우기 <input type="checkbox" id="deadline_3"> </label><br>
+                    <label style="font-size:0.8rem;" for="deadline_4">- 음식물 쓰레기 비우기 <input type="checkbox" id="deadline_4"> </label><br>
+                    <label style="font-size:0.8rem;" for="deadline_5">- 재고 채우기 <input type="checkbox" id="deadline_5"> </label><br>
+                    <label style="font-size:0.8rem;"for="deadline_6">- 흡연실 청소 <input type="checkbox" id="deadline_6"> </label><br>
+                    <label style="font-size:0.8rem;" for="deadline_7">- 바닥 청소 <input type="checkbox" id="deadline_7"> </label><br>
+                    <label style="font-size:0.8rem;" for="deadline_8">- 화장실 청소 <input type="checkbox" id="deadline_8"> </label><br>
+                    <label style="font-size:0.8rem;" for="deadline_9">- 근무일지 쓰기 <input type="checkbox" id="deadline_9"> </label><br>
                 </ul>
                 <div class="icon-thumbs-up"> 도움 되는 직종</div>
                    <ul>
@@ -100,18 +100,208 @@
             </nav>
             <main>
                 <div class="main_line" style="padding-left: 30px; padding-right: 30px;">
-                <h1 class="main_h1">정산</h1><h5 id="clock" style="text-align: center; border-bottom: 1px solid gray; padding-bottom: 30px;">00:00</h5>
-                <table border="0.2">
+                <h1 class="main_h1">정산</h1><h5 id="clock" style="text-align: center; border-bottom: 1px solid gray; padding-bottom: 30px;">
+                    총금액:<input disabled id="last_total"><br>
+                    PC금액:<input id="pc_total">
+                    <script>
+                        document.write("<span>");
+                        document.write("값"+totalmoney);
+                        document.write("</span>");
+                    </script>
+                    </h5></div>
+                <table border="0.2" style="width:533px; margin-left:100px; ">
                     <tr>
-                        <td colspan="20">
-                            <input type="text" id="display" >
+                        <td >
+                            <input type="text" id="display" disabled value="지폐금액" >
+                            <input type="text" id="display" disabled value="개수">
+                            <input type="text" id="display" disabled value="총 금액">
                         </td>
-                        
+                    </tr>
+                    <tr>
+                        <td colspan="10" >
+                            <input type="text" id="50000" disabled value="50,000원" >
+                            <input id="value50000" value="0">
+                            <input type="text" id="total50000" disabled value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="20" >
+                            <input id="10000" disabled value="10,000원" >
+                            <input id="value10000" value="0">
+                            <input id="total10000" disabled value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="20" >
+                            <input id="5000" disabled value="5,000원" >
+                            <input id="value5000" value="0">
+                            <input id="total5000" disabled value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="20" >
+                            <input id="1000" disabled value="1,000원" >
+                            <input id="value1000" value="0">
+                            <input id="total1000" disabled value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="20" >
+                            <input id="500" disabled value="500원" >
+                            <input id="value500" value="0">
+                            <input id="total500" disabled value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="20" >
+                            <input id="100" disabled value="100원" >
+                            <input id="value100" value="0">
+                            <input id="total100" disabled value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="20" >
+                            <input id="50" disabled value="50원" >
+                            <input id="value50" value="0">
+                            <input id="total50" disabled value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="20" >
+                            <input id="10" disabled value="10원" >
+                            <input id="value10" value="0">
+                            <input id="total10" disabled value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="20" >
+                            <input id="10" disabled value="5,000원 묶음" >
+                            <input id="value5000set" value="0">
+                            <input id="total5000set" disabled value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="20" >
+                            <input id="10" disabled value="1,000원 묶음" >
+                            <input id="value1000set" value="0">
+                            <input id="total1000set" disabled value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="20" >
+                            <input id="10" disabled value="500원 묶음" >
+                            <input id="value500set" value="0">
+                            <input id="total500set" disabled value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="20" >
+                            <input id="10" disabled value="100원 묶음" >
+                            <input id="value100set" value="0">
+                            <input id="total100set" disabled value="0">
+                        </td>
                     </tr>
                 </table>
-                    <div class="main_video"></div>
-                <iframe width="640" height="360" src="https://www.youtube.com/embed/33DjsANwlJk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="box-shadow: 2px 2px 2px 2px gray; "></iframe></div>
+<script>
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+    var totalmoney;
+    var value0 = document.getElementById("value50000");
+    var value1 = document.getElementById("value10000");
+    var value2 = document.getElementById("value5000");
+    var value3 = document.getElementById("value1000");
+    var value4 = document.getElementById("value500");
+    var value5 = document.getElementById("value100");
+    var value6 = document.getElementById("value50");
+    var value7 = document.getElementById("value10");
+    var value8 = document.getElementById("value5000set");
+    var value9 = document.getElementById("value1000set");
+    var value10 = document.getElementById("value500set");
+    var value11 = document.getElementById("value100set");
+    $(function () {
+        $("#value50000").change(function () {
+            $(document).ready(function(){
+                $("#total50000").val(numberWithCommas(50000*value0.value));
+            })
+        });
+        $("#value10000").change(function () {
+            $(document).ready(function(){
+                $("#total10000").val(numberWithCommas(10000*value1.value));
+            })
+        });
+        $("#value5000").change(function () {
+            $(document).ready(function(){
+                $("#total5000").val(numberWithCommas(5000*value2.value));
+            })
+        });
+        $("#value1000").change(function () {
+            $(document).ready(function(){
+                $("#total1000").val(numberWithCommas(1000*value3.value));
+            })
+        });
+        $("#value500").change(function () {
+            $(document).ready(function(){
+                $("#total500").val(numberWithCommas(500*value4.value));
+            })
+        });
+        $("#value100").change(function () {
+            $(document).ready(function(){
+                $("#total100").val(numberWithCommas(100*value5.value));
+            })
+        });
+        $("#value50").change(function () {
+            $(document).ready(function(){
+                $("#total50").val(numberWithCommas(50*value6.value));
+            })
+        });
+        $("#value10").change(function () {
+            $(document).ready(function(){
+                $("#total10").val(numberWithCommas(10*value7.value));
+            })
+        });
+        $("#value5000set").change(function () {
+            $(document).ready(function(){
+                $("#total5000set").val(numberWithCommas(50000*value8.value));
+            })
+        });
+        $("#value1000set").change(function () {
+            $(document).ready(function(){
+                $("#total1000set").val(numberWithCommas(10000*value9.value));
+            })
+        });
+        $("#value500set").change(function () {
+            $(document).ready(function(){
+                $("#total500set").val(numberWithCommas(20000*value10.value));
+            })
+        });
+        $("#value100set").change(function () {
+            $(document).ready(function(){
+                $("#total100set").val(numberWithCommas(5000*value11.value));
+            })
+        });
+        $("input").change(function(){
+            $(document).ready(function(){
+                totalmoney =
+                50000*value0.value
+                +10000*value1.value
+                +5000*value2.value
+                +1000*value3.value
+                +500*value4.value
+                +100*value5.value
+                +50*value6.value
+                +10*value7.value
+                +50000*value8.value
+                +10000*value9.value
+                +20000*value10.value
+                +5000*value11.value;
+                $("#last_total").val(numberWithCommas(totalmoney));
+            })
+        });
+    });
+    </script>
                 <div style="border-top:1px solid gray;position:relative;top:200px;padding:10px;">
+                </div>
             </main>
             <aside>
             </aside>
