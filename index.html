@@ -1,166 +1,237 @@
-        .container{
-            font-family: sans-serif;
-            display: flex;
-            flex-direction: column;
-        }
-        header{
-            text-align: center;
-            background-clip: border-box;
-            background-color:rgb(81,107,139);
-        }
-        header>div:nth-child(1){
-            text-align: left;
-            letter-spacing: 0.3px;
-            font-family:sans-serif;
-            font-size: 0.9rem;
-            }
-        header>div:nth-child(2){
-            color:whitesmoke;
-            font-family:sans-serif;
-            font-size: 2rem;
-        }
-        header>div:nth-child(4){
-            border-bottom:1px solid rgba(128,128,128,0.3);
-            background-color:whitesmoke;
-            text-align:center;
-            height:40px;
-        }
-        header>.header_list>p{
-            display:inline-block;
-            margin-right:-20px;
-            margin-left:-15px;
-            text-align: center;
-            color:whitesmoke;
-        }
-        header>.header_list>.list:hover{
-            text-decoration: overline;
-        }
-        footer{
-            border-top:1px solid rgba(128,128,128,0.3);
-            padding-bottom:17px;
-            padding-top:10px;
-            text-align: center;
-            height: 0px;
-        }
-        .content{
-            display:flex;
-        }
-        .content .main_nav{
-            flex-basis: 249px;
-            flex-shrink: 0;
-            border-left:1px solid rgba(128,128,128,0.3);
-            border-right:1px solid rgba(128,128,128,0.3);
-        }
-        .content .fake_nav{
-            flex-basis:452px;
-            flex-shrink: 1;
-        }
-        .content aside{
-            flex-basis: 452x;
-            flex-shrink: 1;
-        }
-        .content nav>ul>li:hover,a:hover{
-            color:darkgreen;
-        }
-        .content a{
-            display: block;
-            margin-bottom:-9.5px;
-            font-size: 0.79rem;
-        }
-        .content li{
-            margin-bottom:8px;
-            font-size: 0.79rem;
-        }
-        main{
-            flex-basis: 730px;
-            border-right:1px solid rgba(128,128,128,0.3) ;
-        }
-        .icon-home:hover{
-            color:red;
-        }
-        .icon-th-list{
-            height: 30px;
-            padding-top:10px;
-            border-bottom: 1px solid rgba(128,128,128,0.3);
-            background-color: rgb(78,205,154);
-            color: white;
-        }
-        .icon-code{
-            border-bottom: 1px solid rgba(128,128,128,0.3);
-            border-top: 1px solid rgba(128,128,128,0.3);
-        }
-        .icon-thumbs-up{
-            border-bottom: 1px solid rgba(128,128,128,0.3);
-            border-top: 1px solid rgba(128,128,128,0.3);
-        }
-        .icon-graduation-cap{
-            border-bottom: 1px solid rgba(128,128,128,0.3);
-            border-top: 1px solid rgba(128,128,128,0.3);
-        }
-        .icon-youtube-play:hover{
-            transform: translate(1px,1px);
-            transition:all 0.1s;
-            color:red;
-        }
-        .main_video{
-            align-items: center;
-            padding-top: 30px;
-            padding-left: 43px;
-            padding-bottom 30px;
-        }
-        .main_h1{
-            text-align: center;
-            padding-top: 10px; 
-            font-size: 33px;
-        }
-        p{
-            font-size: 0.79rem;
-            padding-left: 30px;
-            padding-right: 30px;
-            padding-top: 10px;
-        }
-        A:link{
-            font-family: NanumGothic,sans-serif;
-            line-height: 1.8;
-            margin: 0;
-            padding: 0;
-            border: 0;
-            outline: 0;
-            font-size: 100%;
-            vertical-align: baseline;
-            text-decoration: none;
-            color: #09f;
-        }
-        A:visited{
-            font-family: NanumGothic,sans-serif;
-            line-height: 1.8;
-            margin: 0;
-            padding: 0;
-            border: 0;
-            outline: 0;
-            font-size: 100%;
-            vertical-align: baseline;
-            text-decoration: none;
-            color: #09f;
-        }
-        main>p>a:hover{
-            color: #10f;
-        }
-        div>span{
-            font-family: sans-serif;
-            font-size: 0.8rem;
-            position:relative;
-            top:11px;
-        }
-
-table {
-  border-spacing: 0px;
-  border-collapse: separate;
-}
-table td {
-   width: 30px;
-   background: #CCC;
-} 
-.money{
-     text-align: right;
-}
+<!DOCTYPE>
+<html>
+<head>
+    <svg id = "moon" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:120px;">
+        <circle cx="25" cy="25" r="25" fill="yellow" />
+    </svg>
+   <title>알바 </title>
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/Style.css">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="colors.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155254288-1"></script>
+    <script type="text/javascript">
+    </script>
+        <!--End of Tawk.to Script--><!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155254288-1"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <a href="https://opentutorials.org/"><p style="color:aquamarine;display:inline;position:relative;top:10px;right:15px;">Opentutorials.org</p></a>
+            </div>
+            <div style="position:relative;top:32px">
+                <a href="index.html"><p style="font-size: 1.8rem;color:white;display:inline;">마감 도우미</p></a>
+                <p style="color:whitesmoke;font-family:sans-serif;position:relative;bottom:30;opacity:50%;">Coding Everybody</p>
+            </div>
+            <div class="header_list">
+                <p class="list">개발 프로그램</p><p>|</p>
+                <p class="list">DATABAST</p><p>|</p>
+                <p class="list">언어</p><p>|</p>
+                <p class="list">클라이언트</p><p>|</p>
+                <p class="list">서버</p><p>|</p>
+                <p class="list">개발도구</p><p>|</p>
+                <p class="list">프로젝트 관리</p><p>|</p>
+                <p class="list">기타</p></div>
+            <div id="breadcrumb_line" style="color:darkgray;">
+                <span>
+                    <span class="timer" style="position:relative;right:270px;">
+                        <script>nightdayhandler(this);</script>
+                    </span>
+				근무 날짜 : 금,토 22:00시 ~ 09:00시</span>
+            </div>
+        </header>
+        <section class="content">
+           <nav class = "fake_nav">
+           </nav>
+            <nav class= "main_nav">
+                <div class="icon-th-list"> 오늘 할 일</div>
+                <div class="icon-code"> 목차 </div>
+                <ul style="font-size: 0.9rem">
+                    <li>
+                      <a>요리</a>
+                    </li>
+                    <li>
+                      <a>청소</a>
+                    </li>
+                    <li>
+                      <a>마감</a>
+                    </li>
+                </ul>
+                <div class="icon-graduation-cap"> 반드시 체크</div>
+                <script>
+			$(document).ready(function() {
+				$("input:checkbox").on('click', function() { if ( $(this).prop('checked') ){
+					$(this).parent().addClass("selected");
+				}
+				else {
+					$(this).parent().removeClass("selected");
+					}
+				}); 
+			}); 
+                </script>
+                <ul>
+                    <li>마감 체크</li>
+			<style>.selected{text-decoration:line-through;font-weight:700;}</style>
+			<!-- 스타일은 CSS에 추가해주는 것을 권장합니다. --> 
+			<script> </script>
+                    <label style="font-size:0.8rem;"for="deadline_1">- 식기 정리 <input type="checkbox" id="deadline_1"></label><br>
+                    <label style="font-size:0.8rem;" for="deadline_2">- 자리 정리 <input type="checkbox" id="deadline_2"></label><br>
+                    <label style="font-size:0.8rem;" for="deadline_3">- 일반 쓰레기 비우기 <input type="checkbox" id="deadline_3"> </label><br>
+                    <label style="font-size:0.8rem;" for="deadline_4">- 음식물 쓰레기 비우기 <input type="checkbox" id="deadline_4"> </label><br>
+                    <label style="font-size:0.8rem;" for="deadline_5">- 재고 채우기 <input type="checkbox" id="deadline_5"> </label><br>
+                    <label style="font-size:0.8rem;"for="deadline_6">- 흡연실 청소 <input type="checkbox" id="deadline_6"> </label><br>
+                    <label style="font-size:0.8rem;" for="deadline_7">- 바닥 청소 <input type="checkbox" id="deadline_7"> </label><br>
+                    <label style="font-size:0.8rem;" for="deadline_8">- 화장실 청소 <input type="checkbox" id="deadline_8"> </label><br>
+                    <label style="font-size:0.8rem;" for="deadline_9">- 근무일지 쓰기 <input type="checkbox" id="deadline_9"> </label><br>
+                </ul>
+                <div class="icon-thumbs-up"> 도움 되는 직종</div>
+                   <ul>
+                    <li>프로그래머</li>
+                    <li>웹디자이너</li>
+                    <li>웹기획자</li>
+                    <li>블로거</li>
+                    <li>저널리스트</li>
+                    <li>쇼핑몰 운영자</li></ul>
+            </nav>
+            <main>
+                <div class="main_line" style="padding-left: 30px; padding-right: 30px;">
+                <h1 class="main_h1">정산</h1><h5 id="clock" style="text-align: center; border-bottom: 1px solid gray; padding-bottom: 30px;">
+                <table  style="padding-left:250;">
+                    <tr>
+                        <td style="
+    background: white;">
+                            금고금액:<input class="money" disabled id="last_total" value="0"><br>
+                            PC  금액:<input class="money" id="pc_total" value="0"><br>
+                            정산 금액:<input class="money" id="complate_money" value="0">
+                        </td>
+                    </tr>    
+                </table>
+                    </h5></div>
+                <table border="0.2" style="width:533px;  margin-left:100px; ">
+                    <tr>
+                        <td >
+                            <input type="text" disabled value="금액" >
+                            <input type="text" disabled value="개수">
+                            <input type="text" disabled value="총 금액">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="10" >
+                            <input type="text" id="50000" disabled value="50,000원" >
+                            <input id="value50000" value="0">
+                            <input type="text" id="total50000" disabled value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="20" >
+                            <input id="10000" disabled value="10,000원" >
+                            <input id="value10000" value="0">
+                            <input id="total10000" disabled value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="20" >
+                            <input id="5000" disabled value="5,000원" >
+                            <input id="value5000" value="0">
+                            <input id="total5000" disabled value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="20" >
+                            <input id="1000" disabled value="1,000원" >
+                            <input id="value1000" value="0">
+                            <input id="total1000" disabled value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="20" >
+                            <input id="500" disabled value="500원" >
+                            <input id="value500" value="0">
+                            <input id="total500" disabled value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="20" >
+                            <input id="100" disabled value="100원" >
+                            <input id="value100" value="0">
+                            <input id="total100" disabled value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="20" >
+                            <input id="50" disabled value="50원" >
+                            <input id="value50" value="0">
+                            <input id="total50" disabled value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="20" >
+                            <input id="10" disabled value="10원" >
+                            <input id="value10" value="0">
+                            <input id="total10" disabled value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="20" >
+                            <input disabled value="5,000원 묶음" >
+                            <input id="value5000set" value="0">
+                            <input id="total5000set" disabled value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="20" >
+                            <input disabled value="1,000원 묶음" >
+                            <input id="value1000set" value="0">
+                            <input id="total1000set" disabled value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="20" >
+                            <input disabled value="500원 묶음" >
+                            <input id="value500set" value="0">
+                            <input id="total500set" disabled value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="20" >
+                            <input disabled value="100원 묶음" >
+                            <input id="value100set" value="0">
+                            <input id="total100set" disabled value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="50" >
+                            <input disabled value="계좌이체" ><br>
+                            <input id="account1" value="0">
+                            <input id="account2" value="0">
+                            <input id="account3" value="0">
+                            <input id="account4" value="0">
+                            <input id="account5" value="0">
+                            <input id="account6" value="0">
+                            <input id="account7" value="0">
+                            <input id="account8" value="0">
+                            <input id="account9" value="0">
+                            <input id="account10" value="0">
+                            <input id="account11" value="0">
+                            <input id="account12" value="0">
+                        </td>
+                    </tr>
+                </table>
+    <script src="colors.js"></script>
+                <div style="border-top:1px solid gray;position:relative;top:200px;padding:10px;">
+                </div>
+            </main>
+            <aside>
+            </aside>
+        </section>
+        <footer>
+            <a href="https://opentutorials.org/course/1"><i class="icon-home"></i></a>
+        </footer>
+    </div>
+</body>
+</html>
