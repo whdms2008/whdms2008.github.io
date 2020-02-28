@@ -152,3 +152,12 @@
             position:relative;
             top:11px;
         }
+
+table {
+  border-spacing: 0px;
+  border-collapse: separate;
+}
+table td {
+   width: 30px;
+   background: #ccc;
+} 
