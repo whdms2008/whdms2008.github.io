@@ -159,5 +159,9 @@ table {
 }
 table td {
    width: 30px;
-   background: #ccc;
+   background: #CCC;
 } 
+
+.money{
+     text-align: right;
+}
