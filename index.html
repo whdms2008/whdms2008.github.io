@@ -25,8 +25,8 @@
                 <a href="https://opentutorials.org/"><p style="color:aquamarine;display:inline;position:relative;top:10px;right:15px;">Opentutorials.org</p></a>
             </div>
             <div style="position:relative;top:32px">
-                <a href="main.html"><p style="font-size: 1.8rem;color:white;display:inline;">실습코딩</p></a>
-                <p style="font-size: rem;color:whitesmoke;font-family:sans-serif;position:relative;bottom:30;opacity:50%;">Coding Everybody</p>
+                <a href="main.html"><p style="font-size: 1.8rem;color:white;display:inline;">마감 도우미</p></a>
+                <p style="color:whitesmoke;font-family:sans-serif;position:relative;bottom:30;opacity:50%;">Coding Everybody</p>
             </div>
             <div class="header_list">
                 <p class="list">개발 프로그램</p><p>|</p>
@@ -40,75 +40,44 @@
             <div id="breadcrumb_line" style="color:darkgray;">
                 <span>
                     <span class="timer" style="position:relative;right:270px;">
-                        <script>nightdayhandler(this);</script>
+                        <script>nightdayhandler(this);init();</script>
                     </span>
-				생활코딩 <span class="divider">&gt;</span> WEB <span class="divider">&gt;</span> WEB1 - HTML &amp; Internet					</span>
+				근무 날짜 : 금,토 22:00시 ~ 09:00시</span>
             </div>
         </header>
         <section class="content">
            <nav class = "fake_nav">
            </nav>
             <nav class= "main_nav">
-                <div class="icon-th-list"> 학습 목록</div>
-                <ul>
-                    <li>html</li>
-                    <li>css</li>
+                <div class="icon-th-list"> 오늘 할 일</div>
+                <div class="icon-code"> 목차 </div>
+                <ul style="font-size: 0.9rem">
+                    <li>
+                      <a>요리</a>
+                    </li>
+                    <li>
+                      <a>청소</a>
+                    </li>
+                    <li>
+                      <a>마감</a>
+                    </li>
                 </ul>
-                <div class="icon-code"> 기술 문법</div>
+                <div class="icon-graduation-cap"> 반드시 체크</div>
+                <script>
+                if('input:checkbox[id="deadline_1"]').is(":checked") == true{//여기서부터 시작
+                    alert('hi');
+                }
+                </script>
                 <ul>
-                    <li>선택자</li>
-                    <a>- 선택자와 선언</a><br>
-                    <a>- 선택자의 종류</a><br>
-                    <a>- 부모 자식 선택자</a><br>
-                    <a>- 선택자 공부 팁</a><br>
-                    <a>- 가상 클래스 선택자</a><br>
-                    <a>- 여러가지 선택자들</a><br>
-                    <a>- 선택자와 선언</a><br>
-                    <li>타이포그래피</li>
-                    <a>- font-size</a><br>
-                    <a>- color</a><br>
-                    <a>- text-align</a><br>
-                    <a>- font</a><br>
-                    <a>- 서체</a><br>
-                    <a>- 웹폰트</a><br>
-                    <li>조화</li>
-                    <a>- 상속</a><br>
-                    <a>- stylishr</a><br>
-                    <a>- 캐스케이딩</a><br>
-                    <li>레이아웃</li>
-                    <a>- 인라인 VS 블럭레벨</a><br>
-                    <a>- 박스모델</a><br>
-                    <a>- box_sizing</a><br>
-                    <a>- 마진겹침 현상</a><br>
-                    <a>- 포지션</a><br>
-                    <a>- flex</a><br>
-                    <a>- media query</a><br>
-                    <a>- 다단(multi column)</a><br>
-                    <li>그래픽</li>
-                    <a>- 배경(background)</a><br>
-                    <a>- 필터(filter)</a><br>
-                    <a>- 혼합(blend)</a><br>
-                    <a>- 변형(transform)</a><br>
-                    <a>- SVG</a><br>
-                    <li>모션 그래픽</li>
-                    <a>- 전환(transtion)</a><br>
-                    <li>유지보수</li>
-                    <a>- link와 import</a><br>
-                    <a>- 코드 경량화(minify)</a><br>
-                    <a>- CSS 뛰어넘기(preprocess)</a><br>
-                    <li>library</li>
-                    <a>- fontello</a><br>
-                    <a>- buttons(minify)</a><br>
-                    <a>- semantic-UI(preprocess)</a><br>
-                </ul>
-                <div class="icon-graduation-cap"> 선행 지식</div>
-                <ul>
-                    <li>CSS를 배우는데 필요한 선행지식</li>
-                    <a>- HTML</a><br>
-                    <li>CSS를 선행지식으로 하는 기술들</li>
-                    <a>- javascript</a><br>
-                    <a>- jQuery</a><br>
-                    <a>- Server Side Tech(php,asp,jsp)</a><br>
+                    <li>마감 체크</li>
+                    <a name="deadline1">- 식기 정리 <input type="checkbox" id="deadline_1"></a><br>
+                    <a>- 자리 정리 <input type="checkbox" name="deadline_2"></a><br>
+                    <a>- 일반 쓰레기 비우기 <input type="checkbox" name="deadline_3"> </a><br>
+                    <a>- 음식물 쓰레기 비우기 <input type="checkbox" name="deadline_4"> </a><br>
+                    <a>- 재고 채우기 <input type="checkbox" name="deadline_5"> </a><br>
+                    <a>- 흡연실 청소 <input type="checkbox" name="deadline_6"> </a><br>
+                    <a>- 바닥 청소 <input type="checkbox" name="deadline_7"> </a><br>
+                    <a>- 화장실 청소 <input type="checkbox" name="deadline_8"> </a><br>
                 </ul>
                 <div class="icon-thumbs-up"> 도움 되는 직종</div>
                    <ul>
@@ -120,12 +89,76 @@
                     <li>쇼핑몰 운영자</li></ul>
             </nav>
             <main>
+            <script>
+                var clockTarget = document.getElementById("clock");
+
+
+                function clock() {
+                    var date = new Date();
+
+                    // date Object를 받아오고 
+                    var month = date.getMonth();
+
+                    // 달을 받아옵니다 
+                    var clockDate = date.getDate();
+
+                    // 몇일인지 받아옵니다 
+                    var day = date.getDay();
+
+                    // 요일을 받아옵니다. 
+                    var week = ['일', '월', '화', '수', '목', '금', '토'];
+
+                    // 요일은 숫자형태로 리턴되기때문에 미리 배열을 만듭니다. 
+                    var hours = date.getHours();
+
+                    // 시간을 받아오고 
+                    var minutes = date.getMinutes();
+
+                    // 분도 받아옵니다.
+                    var seconds = date.getSeconds();
+
+                    // 초까지 받아온후 
+                    clockTarget .innerText = `${month+1}월 ${clockDate}일 ${week[day]}요일` +
+
+                    `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes }`  : minutes }:${seconds < 10 ? `0${seconds }`  : seconds }`;
+
+                    // 월은 0부터 1월이기때문에 +1일을 해주고 
+
+                    // 시간 분 초는 한자리수이면 시계가 어색해보일까봐 10보다 작으면 앞에0을 붙혀주는 작업을 3항연산으로 했습니다. 
+                }
+
+
+
+                function init() {
+
+                clock();
+
+                // 최초에 함수를 한번 실행시켜주고 
+                setInterval(clock, 1000);
+
+                // setInterval이라는 함수로 매초마다 실행을 해줍니다.
+
+                // setInterval은 첫번째 파라메터는 함수이고 두번째는 시간인데 밀리초단위로 받습니다. 1000 = 1초 
+
+                }
+
+
+
+                init();
+
+
+                </script>
                 <div class="main_line" style="padding-left: 30px; padding-right: 30px;">
-                <h1 class="main_h1">FLEX</h1><h5 style="text-align: center; border-bottom: 1px solid gray; padding-bottom: 30px;">2019-12-20 14:20:53</h5></div>
-                <p style="line-height: 1.8;">CSS의 flex는 엘리먼트들의 크기나 위치를 쉽게 잡아주는 도구입니다. 지금까지 레이아웃과 관련된 다양한 속성들이 있었지만 그리 효과적이지 않았습니다. flex를 이용하면 레이아웃을 매우 효과적으로 표현할 수 있습니다. 아래 영상에서는 flex가 도입된 배경을 설명합니다.</p>
-                <p>이 기술을 현재 사용해도 좋을지는 아래 페이지를 참고하셔요.</p>
-                <p><a href="http://caniuse.com/#search=flex" target="_blank">http://caniuse.com/#search=flex</a></p>
-                <div class="main_video">
+                <h1 class="main_h1">정산</h1><h5 id="clock" style="text-align: center; border-bottom: 1px solid gray; padding-bottom: 30px;">00:00</h5>
+                <table border="0.2">
+                    <tr>
+                        <td colspan="20">
+                            <input type="text" id="display" >
+                        </td>
+                        
+                    </tr>
+                </table>
+                    <div class="main_video"></div>
                 <iframe width="640" height="360" src="https://www.youtube.com/embed/33DjsANwlJk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="box-shadow: 2px 2px 2px 2px gray; "></iframe></div>
                 <div style="border-top:1px solid gray;position:relative;top:200px;padding:10px;">
               <!-- 라이브리 시티 설치 코드 -->
