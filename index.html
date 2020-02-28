@@ -101,15 +101,16 @@
             <main>
                 <div class="main_line" style="padding-left: 30px; padding-right: 30px;">
                 <h1 class="main_h1">정산</h1><h5 id="clock" style="text-align: center; border-bottom: 1px solid gray; padding-bottom: 30px;">
-                    총금액:<input disabled id="last_total"><br>
-                    PC금액:<input id="pc_total">
+                    금고금액:<input disabled id="last_total" value="0"><br>
+                    PC  금액:<input id="pc_total" value="0"><br>
+                    정산 금액:<input id="complate_money" value="0">
                     </h5></div>
-                <table border="0.2" style="width:600px; margin-left:100px; ">
+                <table border="0.2" style="width:533px; margin-left:100px; ">
                     <tr>
                         <td >
-                            <input type="text" id="display" disabled value="지폐금액" >
-                            <input type="text" id="display" disabled value="개수">
-                            <input type="text" id="display" disabled value="총 금액">
+                            <input type="text" disabled value="금액" >
+                            <input type="text" disabled value="개수">
+                            <input type="text" disabled value="총 금액">
                         </td>
                     </tr>
                     <tr>
@@ -170,30 +171,47 @@
                     </tr>
                     <tr>
                         <td colspan="20" >
-                            <input id="10" disabled value="5,000원 묶음" >
+                            <input disabled value="5,000원 묶음" >
                             <input id="value5000set" value="0">
                             <input id="total5000set" disabled value="0">
                         </td>
                     </tr>
                     <tr>
                         <td colspan="20" >
-                            <input id="10" disabled value="1,000원 묶음" >
+                            <input disabled value="1,000원 묶음" >
                             <input id="value1000set" value="0">
                             <input id="total1000set" disabled value="0">
                         </td>
                     </tr>
                     <tr>
                         <td colspan="20" >
-                            <input id="10" disabled value="500원 묶음" >
+                            <input disabled value="500원 묶음" >
                             <input id="value500set" value="0">
                             <input id="total500set" disabled value="0">
                         </td>
                     </tr>
                     <tr>
                         <td colspan="20" >
-                            <input id="10" disabled value="100원 묶음" >
+                            <input disabled value="100원 묶음" >
                             <input id="value100set" value="0">
                             <input id="total100set" disabled value="0">
+                        </td>
+                    </tr>>
+                    <tr>
+                        <td colspan="50" >
+                            <input disabled value="계좌이체" ><br>
+                            <input id="account1" value="0">
+                            <input id="account2" value="0">
+                            <input id="account3" value="0">
+                            <input id="account4" value="0">
+                            <input id="account5" value="0">
+                            <input id="account6" value="0">
+                            <input id="account7" value="0">
+                            <input id="account8" value="0">
+                            <input id="account9" value="0">
+                            <input id="account10" value="0">
+                            <input id="account11" value="0">
+                            <input id="account12" value="0">
                         </td>
                     </tr>
                 </table>
@@ -202,6 +220,7 @@ function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
     var totalmoney;
+    var pc_money = document.getElementById("pc_total");
     var value0 = document.getElementById("value50000");
     var value1 = document.getElementById("value10000");
     var value2 = document.getElementById("value5000");
@@ -214,6 +233,18 @@ function numberWithCommas(x) {
     var value9 = document.getElementById("value1000set");
     var value10 = document.getElementById("value500set");
     var value11 = document.getElementById("value100set");
+    var value12 = document.getElementById("account1");
+    var value13 = document.getElementById("account2");
+    var value14 = document.getElementById("account3");
+    var value15 = document.getElementById("account4");
+    var value16 = document.getElementById("account5");
+    var value17 = document.getElementById("account6");
+    var value18 = document.getElementById("account7");
+    var value19 = document.getElementById("account8");
+    var value20 = document.getElementById("account9");
+    var value21 = document.getElementById("account10");
+    var value22 = document.getElementById("account11");
+    var value23 = document.getElementById("account12");
     $(function () {
         $("#value50000").change(function () {
             $(document).ready(function(){
@@ -289,8 +320,21 @@ function numberWithCommas(x) {
                 +50000*value8.value
                 +10000*value9.value
                 +20000*value10.value
-                +5000*value11.value;
+                +5000*value11.value
+                +1*value12.value
+                +1*value13.value
+                +1*value14.value
+                +1*value15.value
+                +1*value16.value
+                +1*value17.value
+                +1*value18.value
+                +1*value19.value
+                +1*value20.value
+                +1*value21.value
+                +1*value22.value
+                +1*value23.value;
                 $("#last_total").val(numberWithCommas(totalmoney));
+                $("#complate_money").val(numberWithCommas(totalmoney-pc_money.value));
             })
         });
     });
