@@ -70,21 +70,18 @@
                 </script>
                 <ul>
                     <li>마감 체크</li>
-		    <p> 
-			<input type="checkbox" id="test-1"> <label for="test-1">체크박스를 체크 또는 라벨(이 문구)을 클릭시 글자가 변합니다.</label>
-		    </p>
 			<style>.selected{text-decoration:line-through;font-weight:700;color:red}</style>
 			<!-- 스타일은 CSS에 추가해주는 것을 권장합니다. --> 
 			<script> $(document).ready(function() { $("input:checkbox").on('click', function() { if ( $(this).prop('checked') ) { $(this).parent().addClass("selected"); } else { $(this).parent().removeClass("selected"); } }); }); </script>
-                    <a name="deadline1">- 식기 정리 <input type="checkbox" id="deadline_1"></a><br>
-                    <a>- 자리 정리 <input type="checkbox" name="deadline_2"></a><br>
-                    <a>- 일반 쓰레기 비우기 <input type="checkbox" name="deadline_3"> </a><br>
-                    <a>- 음식물 쓰레기 비우기 <input type="checkbox" name="deadline_4"> </a><br>
-                    <a>- 재고 채우기 <input type="checkbox" name="deadline_5"> </a><br>
-                    <a>- 흡연실 청소 <input type="checkbox" name="deadline_6"> </a><br>
-                    <a>- 바닥 청소 <input type="checkbox" name="deadline_7"> </a><br>
-                    <a>- 화장실 청소 <input type="checkbox" name="deadline_8"> </a><br>
-                    <a>- 근무일지 쓰기 <input type="checkbox" name="deadline_9"> </a><br>
+                    <a for="deadline_1">- 식기 정리 <input type="checkbox" id="deadline_1"></a><br>
+                    <a for="deadline_2">- 자리 정리 <input type="checkbox" id="deadline_2"></a><br>
+                    <a for="deadline_3">- 일반 쓰레기 비우기 <input type="checkbox" id="deadline_3"> </a><br>
+                    <a for="deadline_4">- 음식물 쓰레기 비우기 <input type="checkbox" id="deadline_4"> </a><br>
+                    <a for="deadline_5">- 재고 채우기 <input type="checkbox" id="deadline_5"> </a><br>
+                    <a for="deadline_6">- 흡연실 청소 <input type="checkbox" id="deadline_6"> </a><br>
+                    <a for="deadline_7">- 바닥 청소 <input type="checkbox" id="deadline_7"> </a><br>
+                    <a for="deadline_8">- 화장실 청소 <input type="checkbox" id="deadline_8"> </a><br>
+                    <a for="deadline_9">- 근무일지 쓰기 <input type="checkbox" id="deadline_9"> </a><br>
                 </ul>
                 <div class="icon-thumbs-up"> 도움 되는 직종</div>
                    <ul>
