@@ -13,8 +13,6 @@
     <script src="colors.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155254288-1"></script>
-    <script type="text/javascript">
-    </script>
         <!--End of Tawk.to Script--><!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155254288-1"></script>
 </head>
@@ -89,14 +87,28 @@
                     <label style="font-size:0.8rem;" for="deadline_8">- 화장실 청소 <input type="checkbox" id="deadline_8"> </label><br>
                     <label style="font-size:0.8rem;" for="deadline_9">- 근무일지 쓰기 <input type="checkbox" id="deadline_9"> </label><br>
                 </ul>
-                <div class="icon-thumbs-up"> 도움 되는 직종</div>
-                   <ul>https://github.com/whdms2008/whdms2008.github.io
-                    <li>프로그래머</li>
-                    <li>웹디자이너</li>
-                    <li>웹기획자</li>
-                    <li>블로거</li>
-                    <li>저널리스트</li>
-                    <li>쇼핑몰 운영자</li></ul>
+                <div class="icon-thumbs-up"> 사이트 기능 </div>
+                   <ul>
+                       <li><a target="_blank"  href="https://github.com/whdms2008/whdms2008.github.io">깃허브</a></li>
+                       <li><a href="#!manager" onclick="fetchPage('manager')">마감 도우미</a></li>
+                       <li><a href="#!program" onclick="fetchPage('program')">제작 프로그램</a></li>
+                       <li><a href="#!study" onclick="fetchPage('study')">언어 공부</a></li>
+                       <li><a href="#!IT" onclick="fetchPage('IT')">IT 지식</a></li>
+                    </ul>
+                <script>/*
+                    function fetchPage(name){
+                        fetch(name).then(function(response){
+                            response.text().then(function(text){
+                                document.querySelector('main').innerHTML = text;
+                            })
+                        });
+                    }
+                    if(location.hash){
+                        fetchPage(location.hash.substr(2));
+                    } else {
+                        fetchPage('Welcome')                    
+                    }*/
+                </script>
             </nav>
             <main>
                 <div class="main_line" style="padding-left: 30px; padding-right: 30px;">
@@ -206,22 +218,21 @@
                     <tr>
                         <td colspan="50" >
                             <input disabled value="계좌이체" ><br>
-                            <input id="account1" value="0">
-                            <input id="account2" value="0">
-                            <input id="account3" value="0">
-                            <input id="account4" value="0">
-                            <input id="account5" value="0">
-                            <input id="account6" value="0">
-                            <input id="account7" value="0">
-                            <input id="account8" value="0">
-                            <input id="account9" value="0">
-                            <input id="account10" value="0">
-                            <input id="account11" value="0">
-                            <input id="account12" value="0">
+                            <input id="account1" value='0'>
+                            <input id="account2" value='0'>
+                            <input id="account3" value='0'>
+                            <input id="account4" value='0'>
+                            <input id="account5" value='0'>
+                            <input id="account6" value='0'>
+                            <input id="account7" value='0'>
+                            <input id="account8" value='0'>
+                            <input id="account9" value='0'>
+                            <input id="account10" value='0'>
+                            <input id="account11" value='0'>
+                            <input id="account12" value='0'>
                         </td>
                     </tr>
                 </table>
-    <script src="colors.js"></script>
                 <div style="border-top:1px solid gray;position:relative;top:200px;padding:10px;">
                 </div>
             </main>
@@ -231,6 +242,7 @@
         <footer>
             <a href="https://opentutorials.org/course/1"><i class="icon-home"></i></a>
         </footer>
+    <script src="colors.js"></script>
     </div>
 </body>
 </html>
