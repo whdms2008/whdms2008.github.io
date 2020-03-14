@@ -1,4 +1,3 @@
-
 var ColorControll = {
     setColor: function (link, color) {
 //        document.querySelector(link).style.color = color;
@@ -52,6 +51,7 @@ function nightdayhandler(self) {
     gtag('js', new Date());
     gtag('config', 'UA-155254288-1');
 
+/*
 
 //댓글
 (function(d, s) {
@@ -73,7 +73,7 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     s1.setAttribute('crossorigin','*');
     s0.parentNode.insertBefore(s1,s0);
 })();
-
+*/
 //밤낮 시스템
 var d = new Date();
 var h = d.getUTCHours()-9;
@@ -84,15 +84,6 @@ if (h < 7){
     }
     document.querySelector("#moon").style.right = 1585-130*h;
 
-var change= {
-    input: function (id, value , money) {
-        $("#value"+id).change(function () {
-            $(document).ready(function(){
-                $("#total"+id).val(numberWithCommas(money*value0.value));
-            })
-        });
-    }
-};
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -124,18 +115,66 @@ function numberWithCommas(x) {
     var value22 = document.getElementById("account11");
     var value23 = document.getElementById("account12");
     $(function () {
-        change.input("50000","value0","50000");
-        change.input("10000","value1","10000");
-        change.input("5000","value2","5000");
-        change.input("1000","value3","1000");
-        change.input("500","value4","500");
-        change.input("100","value5","100");
-        change.input("50","value6","50");
-        change.input("10","value7","10");
-        change.input("5000set","value8","50000");
-        change.input("1000set","value9","10000");
-        change.input("500set","value10","20000");
-        change.input("100set","value11","5000");
+        $("#value50000").change(function () {
+            $(document).ready(function(){
+                $("#total50000").val(numberWithCommas(50000*value0.value));
+            })
+        });
+        $("#value10000").change(function () {
+            $(document).ready(function(){
+                $("#total10000").val(numberWithCommas(10000*value1.value));
+            })
+        });
+        $("#value5000").change(function () {
+            $(document).ready(function(){
+                $("#total5000").val(numberWithCommas(5000*value2.value));
+            })
+        });
+        $("#value1000").change(function () {
+            $(document).ready(function(){
+                $("#total1000").val(numberWithCommas(1000*value3.value));
+            })
+        });
+        $("#value500").change(function () {
+            $(document).ready(function(){
+                $("#total500").val(numberWithCommas(500*value4.value));
+            })
+        });
+        $("#value100").change(function () {
+            $(document).ready(function(){
+                $("#total100").val(numberWithCommas(100*value5.value));
+            })
+        });
+        $("#value50").change(function () {
+            $(document).ready(function(){
+                $("#total50").val(numberWithCommas(50*value6.value));
+            })
+        });
+        $("#value10").change(function () {
+            $(document).ready(function(){
+                $("#total10").val(numberWithCommas(10*value7.value));
+            })
+        });
+        $("#value5000set").change(function () {
+            $(document).ready(function(){
+                $("#total5000set").val(numberWithCommas(50000*value8.value));
+            })
+        });
+        $("#value1000set").change(function () {
+            $(document).ready(function(){
+                $("#total1000set").val(numberWithCommas(10000*value9.value));
+            })
+        });
+        $("#value500set").change(function () {
+            $(document).ready(function(){
+                $("#total500set").val(numberWithCommas(20000*value10.value));
+            })
+        });
+        $("#value100set").change(function () {
+            $(document).ready(function(){
+                $("#total100set").val(numberWithCommas(5000*value11.value));
+            })
+        });
         $("input").change(function(){
             $(document).ready(function(){
                 totalmoney =
